@@ -3,7 +3,6 @@ from pathlib import Path
 
 
 list_of_files = [
-   ".github/workflows/ci.yaml",
    "src/__init__.py",
    "src/data/__init__.py",
    "src/data/make_dataset.py",
@@ -14,20 +13,25 @@ list_of_files = [
    "src/models/train_model.py",
    "src/visualization/__init__.py",
    "src/visualization/visualize.py",
-   "data/external/",
-   "data/interim/",
-   "data/processed/",
-   "data/raw/",
-   "docs/",
-   "models/",
-   "notebooks/",
-   "referances/",
-   "reports/figures/",
+   "notebooks/experiment.ipynb",
    "requirements.txt",
    "setup.py",
    "Makefile",
    "tox.ini"
 ]
+
+list_of_dirs = ["docs", 
+                "models", 
+                "references",
+                "data/external",
+                "data/interim",
+                "data/processed",
+                "data/raw",
+                "reports/figures",
+]
+
+for dir in list_of_dirs:
+    os.makedirs(dir, exist_ok=True)
 
 for filepath in list_of_files:
     filepath = Path(filepath)
