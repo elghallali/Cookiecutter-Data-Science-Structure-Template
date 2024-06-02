@@ -16,7 +16,7 @@ list_of_files = [
    "notebooks/experiment.ipynb",
    "requirements.txt",
    "setup.py",
-   "params.yaml"
+   "params.yaml",
    "Makefile",
    "tox.ini"
 ]
